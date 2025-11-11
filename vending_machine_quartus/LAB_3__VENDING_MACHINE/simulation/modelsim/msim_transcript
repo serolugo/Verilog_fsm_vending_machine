@@ -1,0 +1,109 @@
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do LAB3__VENDING_MACHINE_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/DOCUMENTOS/2.-Escuela/5.\ TEC/FPGA/GITHUB/Verilog_fsm_vending_machine/vending_machine_quartus/LAB_3__VENDING_MACHINE {C:/DOCUMENTOS/2.-Escuela/5. TEC/FPGA/GITHUB/Verilog_fsm_vending_machine/vending_machine_quartus/LAB_3__VENDING_MACHINE/LAB3__VENDING_MACHINE.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:01:25 on Nov 10,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/DOCUMENTOS/2.-Escuela/5. TEC/FPGA/GITHUB/Verilog_fsm_vending_machine/vending_machine_quartus/LAB_3__VENDING_MACHINE" C:/DOCUMENTOS/2.-Escuela/5. TEC/FPGA/GITHUB/Verilog_fsm_vending_machine/vending_machine_quartus/LAB_3__VENDING_MACHINE/LAB3__VENDING_MACHINE.v 
+# -- Compiling module LAB3__VENDING_MACHINE
+# -- Compiling module vending_machine
+# -- Compiling module bcd_to_7seg
+# 
+# Top level modules:
+# 	LAB3__VENDING_MACHINE
+# End time: 22:01:25 on Nov 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/DOCUMENTOS/2.-Escuela/5.\ TEC/FPGA/GITHUB/Verilog_fsm_vending_machine/vending_machine_quartus/LAB_3__VENDING_MACHINE {C:/DOCUMENTOS/2.-Escuela/5. TEC/FPGA/GITHUB/Verilog_fsm_vending_machine/vending_machine_quartus/LAB_3__VENDING_MACHINE/tb_vending_machine.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:01:25 on Nov 10,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/DOCUMENTOS/2.-Escuela/5. TEC/FPGA/GITHUB/Verilog_fsm_vending_machine/vending_machine_quartus/LAB_3__VENDING_MACHINE" C:/DOCUMENTOS/2.-Escuela/5. TEC/FPGA/GITHUB/Verilog_fsm_vending_machine/vending_machine_quartus/LAB_3__VENDING_MACHINE/tb_vending_machine.v 
+# -- Compiling module tb_vending_machine
+# 
+# Top level modules:
+# 	tb_vending_machine
+# End time: 22:01:25 on Nov 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L maxii_ver -L rtl_work -L work -voptargs="+acc"  tb_vending_machine
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L maxii_ver -L rtl_work -L work -voptargs=""+acc"" tb_vending_machine 
+# Start time: 22:01:25 on Nov 10,2025
+# Loading work.tb_vending_machine
+# Loading work.LAB3__VENDING_MACHINE
+# Loading work.vending_machine
+# Loading work.bcd_to_7seg
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# t	st	motor	col	credit	change	sw
+# [10]	0	0	0	0	0	00
+# [30]	0	0	0	0	0	00
+# [50]	0	0	0	0	0	00
+# [70]	0	0	0	0	0	00
+# [90]	0	0	0	0	0	00
+# [110]	0	0	0	0	0	00
+# [130]	0	0	0	0	0	10
+# [150]	0	0	0	0	0	10
+# [170]	1	0	0	0	0	10
+# [190]	1	0	0	0	0	10
+# [210]	1	0	0	0	0	10
+# [230]	1	0	0	1	0	10
+# [250]	1	0	0	1	0	10
+# [270]	1	0	0	1	0	10
+# [290]	1	0	0	2	0	10
+# [310]	1	0	0	2	0	10
+# [330]	1	0	0	2	0	10
+# [350]	2	0	0	2	0	10
+# [370]	3	0	0	0	0	10
+# [390]	3	1	0	0	0	10
+# [410]	3	1	0	0	0	10
+# [430]	3	1	0	0	0	10
+# [450]	3	1	0	0	0	10
+# [470]	3	1	0	0	0	10
+# [490]	3	1	0	0	0	10
+# [510]	3	1	0	0	0	10
+# [530]	3	1	0	0	0	10
+# [550]	3	1	0	0	0	10
+# [570]	3	1	0	0	0	10
+# [590]	3	0	1	0	0	10
+# [610]	0	0	1	0	0	10
+# [630]	0	0	0	0	0	10
+# [650]	0	0	0	0	0	10
+# [670]	0	0	0	0	0	10
+# [690]	0	0	0	0	0	10
+# [710]	0	0	0	0	0	10
+# [730]	0	0	0	0	0	10
+# [750]	0	0	0	0	0	10
+# [770]	0	0	0	0	0	10
+# [790]	0	0	0	0	0	10
+# [810]	0	0	0	0	0	10
+# [830]	0	0	0	0	0	10
+# [850]	0	0	0	0	0	10
+# [870]	0	0	0	0	0	10
+# [890]	0	0	0	0	0	10
+# [910]	0	0	0	0	0	10
+# [930]	0	0	0	0	0	10
+# [950]	0	0	0	0	0	10
+# [970]	0	0	0	0	0	10
+# [990]	0	0	0	0	0	10
+# [1010]	0	0	0	0	0	10
+# Fin de la simulación.
+# ** Note: $stop    : C:/DOCUMENTOS/2.-Escuela/5. TEC/FPGA/GITHUB/Verilog_fsm_vending_machine/vending_machine_quartus/LAB_3__VENDING_MACHINE/tb_vending_machine.v(185)
+#    Time: 1030 ps  Iteration: 1  Instance: /tb_vending_machine
+# Break in Module tb_vending_machine at C:/DOCUMENTOS/2.-Escuela/5. TEC/FPGA/GITHUB/Verilog_fsm_vending_machine/vending_machine_quartus/LAB_3__VENDING_MACHINE/tb_vending_machine.v line 185
+# WARNING: No extended dataflow license exists
+# End time: 22:01:50 on Nov 10,2025, Elapsed time: 0:00:25
+# Errors: 0, Warnings: 1

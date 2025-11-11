@@ -1,0 +1,99 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/DOCUMENTOS/2.-Escuela/5. TEC/FPGA/GITHUB/Verilog_fsm_vending_machine/vending_machine_quartus/LAB_3__VENDING_MACHINE/simulation/modelsim
+vbcd_to_7seg
+Z1 !s110 1762837285
+!i10b 1
+!s100 7@YnneJaFnJfl5F7BWa^J2
+I`0gkjnifC8J7zVLgQomO<3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1755483193
+Z4 8C:/DOCUMENTOS/2.-Escuela/5. TEC/FPGA/GITHUB/Verilog_fsm_vending_machine/vending_machine_quartus/LAB_3__VENDING_MACHINE/LAB3__VENDING_MACHINE.v
+Z5 FC:/DOCUMENTOS/2.-Escuela/5. TEC/FPGA/GITHUB/Verilog_fsm_vending_machine/vending_machine_quartus/LAB_3__VENDING_MACHINE/LAB3__VENDING_MACHINE.v
+L0 240
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1762837285.000000
+Z8 !s107 C:/DOCUMENTOS/2.-Escuela/5. TEC/FPGA/GITHUB/Verilog_fsm_vending_machine/vending_machine_quartus/LAB_3__VENDING_MACHINE/LAB3__VENDING_MACHINE.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/DOCUMENTOS/2.-Escuela/5. TEC/FPGA/GITHUB/Verilog_fsm_vending_machine/vending_machine_quartus/LAB_3__VENDING_MACHINE|C:/DOCUMENTOS/2.-Escuela/5. TEC/FPGA/GITHUB/Verilog_fsm_vending_machine/vending_machine_quartus/LAB_3__VENDING_MACHINE/LAB3__VENDING_MACHINE.v|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work {+incdir+C:/DOCUMENTOS/2.-Escuela/5. TEC/FPGA/GITHUB/Verilog_fsm_vending_machine/vending_machine_quartus/LAB_3__VENDING_MACHINE}
+Z12 tCvgOpt 0
+vLAB3__VENDING_MACHINE
+R1
+!i10b 1
+!s100 nB<ROjN[_K=_6OX9T6Y;H0
+I5dA`LcQk^Yj[acE>H=NNa3
+R2
+R0
+R3
+R4
+R5
+L0 6
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@l@a@b3__@v@e@n@d@i@n@g_@m@a@c@h@i@n@e
+vtb_vending_machine
+R1
+!i10b 1
+!s100 BJz8SKQ]KJBhdWiaiWVBk1
+IOkCkkYYD;lBnZeH;Ig7Uz0
+R2
+R0
+w1755483405
+8C:/DOCUMENTOS/2.-Escuela/5. TEC/FPGA/GITHUB/Verilog_fsm_vending_machine/vending_machine_quartus/LAB_3__VENDING_MACHINE/tb_vending_machine.v
+FC:/DOCUMENTOS/2.-Escuela/5. TEC/FPGA/GITHUB/Verilog_fsm_vending_machine/vending_machine_quartus/LAB_3__VENDING_MACHINE/tb_vending_machine.v
+L0 5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/DOCUMENTOS/2.-Escuela/5. TEC/FPGA/GITHUB/Verilog_fsm_vending_machine/vending_machine_quartus/LAB_3__VENDING_MACHINE/tb_vending_machine.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/DOCUMENTOS/2.-Escuela/5. TEC/FPGA/GITHUB/Verilog_fsm_vending_machine/vending_machine_quartus/LAB_3__VENDING_MACHINE|C:/DOCUMENTOS/2.-Escuela/5. TEC/FPGA/GITHUB/Verilog_fsm_vending_machine/vending_machine_quartus/LAB_3__VENDING_MACHINE/tb_vending_machine.v|
+!i113 1
+R10
+R11
+R12
+vvending_machine
+R1
+!i10b 1
+!s100 RN389kXR4fBhMIPl;TnW]0
+I:YZ:5SR>VV^b[@j9@TTWd1
+R2
+R0
+R3
+R4
+R5
+L0 67
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12

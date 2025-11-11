@@ -1,0 +1,7 @@
+
+State Machine - |top_vending_machine|fsm:vm_inst|state
+Name state.PICK state.DISP state.COINS state.IDLE 
+state.IDLE 0 0 0 0 
+state.COINS 0 0 1 1 
+state.DISP 0 1 0 1 
+state.PICK 1 0 0 1 

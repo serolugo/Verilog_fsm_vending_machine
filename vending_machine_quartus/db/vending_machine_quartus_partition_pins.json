@@ -1,0 +1,133 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "hex_credit[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_credit[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_credit[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_credit[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_credit[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_credit[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_credit[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_change[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_change[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_change[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_change[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_change[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_change[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_change[6]",
+					"strict" : false
+				},
+				{
+					"name" : "led[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led[4]",
+					"strict" : false
+				},
+				{
+					"name" : "led[5]",
+					"strict" : false
+				},
+				{
+					"name" : "led[6]",
+					"strict" : false
+				},
+				{
+					"name" : "led[7]",
+					"strict" : false
+				},
+				{
+					"name" : "collected",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "sw[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sw[1]",
+					"strict" : false
+				},
+				{
+					"name" : "btn[3]",
+					"strict" : false
+				},
+				{
+					"name" : "btn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "btn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "btn[2]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

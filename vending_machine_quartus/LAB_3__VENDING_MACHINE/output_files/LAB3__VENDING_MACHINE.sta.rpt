@@ -1,0 +1,550 @@
+Timing Analyzer report for LAB3__VENDING_MACHINE
+Sun Aug 17 19:23:54 2025
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'clk'
+ 12. Hold: 'clk'
+ 13. Setup Transfers
+ 14. Hold Transfers
+ 15. Report TCCS
+ 16. Report RSKM
+ 17. Unconstrained Paths Summary
+ 18. Clock Status Summary
+ 19. Unconstrained Input Ports
+ 20. Unconstrained Output Ports
+ 21. Unconstrained Input Ports
+ 22. Unconstrained Output Ports
+ 23. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; LAB3__VENDING_MACHINE                               ;
+; Device Family         ; MAX II                                              ;
+; Device Name           ; EPM240T100C5                                        ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Slow Model                                          ;
+; Rise/Fall Delays      ; Unavailable                                         ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Fmax Summary                                     ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 102.09 MHz ; 102.09 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Setup Summary                  ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -8.795 ; -324.835      ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Hold Summary                  ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 1.399 ; 0.000         ;
++-------+-------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++--------------------------------+
+; Minimum Pulse Width Summary    ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -2.289 ; -2.289        ;
++-------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clk'                                                                                                                                             ;
++--------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; -8.795 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.462      ;
+; -8.795 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.462      ;
+; -8.795 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.462      ;
+; -8.795 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.462      ;
+; -8.795 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.462      ;
+; -8.795 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.462      ;
+; -8.795 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.462      ;
+; -8.795 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.462      ;
+; -8.760 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.427      ;
+; -8.760 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[9]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.427      ;
+; -8.760 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.427      ;
+; -8.760 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[11] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.427      ;
+; -8.760 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[12] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.427      ;
+; -8.760 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[13] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.427      ;
+; -8.760 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[14] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.427      ;
+; -8.760 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[15] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.427      ;
+; -8.760 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[16] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.427      ;
+; -8.760 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.427      ;
+; -8.707 ; vending_machine:vm_inst|m_count[16] ; vending_machine:vm_inst|m_count[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.374      ;
+; -8.707 ; vending_machine:vm_inst|m_count[16] ; vending_machine:vm_inst|m_count[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.374      ;
+; -8.707 ; vending_machine:vm_inst|m_count[16] ; vending_machine:vm_inst|m_count[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.374      ;
+; -8.707 ; vending_machine:vm_inst|m_count[16] ; vending_machine:vm_inst|m_count[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.374      ;
+; -8.707 ; vending_machine:vm_inst|m_count[16] ; vending_machine:vm_inst|m_count[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.374      ;
+; -8.707 ; vending_machine:vm_inst|m_count[16] ; vending_machine:vm_inst|m_count[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.374      ;
+; -8.707 ; vending_machine:vm_inst|m_count[16] ; vending_machine:vm_inst|m_count[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.374      ;
+; -8.707 ; vending_machine:vm_inst|m_count[16] ; vending_machine:vm_inst|m_count[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.374      ;
+; -8.672 ; vending_machine:vm_inst|m_count[16] ; vending_machine:vm_inst|m_count[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.339      ;
+; -8.672 ; vending_machine:vm_inst|m_count[16] ; vending_machine:vm_inst|m_count[9]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.339      ;
+; -8.672 ; vending_machine:vm_inst|m_count[16] ; vending_machine:vm_inst|m_count[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.339      ;
+; -8.672 ; vending_machine:vm_inst|m_count[16] ; vending_machine:vm_inst|m_count[11] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.339      ;
+; -8.672 ; vending_machine:vm_inst|m_count[16] ; vending_machine:vm_inst|m_count[12] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.339      ;
+; -8.672 ; vending_machine:vm_inst|m_count[16] ; vending_machine:vm_inst|m_count[13] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.339      ;
+; -8.672 ; vending_machine:vm_inst|m_count[16] ; vending_machine:vm_inst|m_count[14] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.339      ;
+; -8.672 ; vending_machine:vm_inst|m_count[16] ; vending_machine:vm_inst|m_count[15] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.339      ;
+; -8.672 ; vending_machine:vm_inst|m_count[16] ; vending_machine:vm_inst|m_count[16] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.339      ;
+; -8.672 ; vending_machine:vm_inst|m_count[16] ; vending_machine:vm_inst|m_count[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.339      ;
+; -8.629 ; vending_machine:vm_inst|credit[1]   ; vending_machine:vm_inst|m_count[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.296      ;
+; -8.629 ; vending_machine:vm_inst|credit[1]   ; vending_machine:vm_inst|m_count[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.296      ;
+; -8.629 ; vending_machine:vm_inst|credit[1]   ; vending_machine:vm_inst|m_count[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.296      ;
+; -8.629 ; vending_machine:vm_inst|credit[1]   ; vending_machine:vm_inst|m_count[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.296      ;
+; -8.629 ; vending_machine:vm_inst|credit[1]   ; vending_machine:vm_inst|m_count[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.296      ;
+; -8.629 ; vending_machine:vm_inst|credit[1]   ; vending_machine:vm_inst|m_count[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.296      ;
+; -8.629 ; vending_machine:vm_inst|credit[1]   ; vending_machine:vm_inst|m_count[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.296      ;
+; -8.629 ; vending_machine:vm_inst|credit[1]   ; vending_machine:vm_inst|m_count[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.296      ;
+; -8.594 ; vending_machine:vm_inst|credit[1]   ; vending_machine:vm_inst|m_count[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.261      ;
+; -8.594 ; vending_machine:vm_inst|credit[1]   ; vending_machine:vm_inst|m_count[9]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.261      ;
+; -8.594 ; vending_machine:vm_inst|credit[1]   ; vending_machine:vm_inst|m_count[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.261      ;
+; -8.594 ; vending_machine:vm_inst|credit[1]   ; vending_machine:vm_inst|m_count[11] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.261      ;
+; -8.594 ; vending_machine:vm_inst|credit[1]   ; vending_machine:vm_inst|m_count[12] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.261      ;
+; -8.594 ; vending_machine:vm_inst|credit[1]   ; vending_machine:vm_inst|m_count[13] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.261      ;
+; -8.594 ; vending_machine:vm_inst|credit[1]   ; vending_machine:vm_inst|m_count[14] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.261      ;
+; -8.594 ; vending_machine:vm_inst|credit[1]   ; vending_machine:vm_inst|m_count[15] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.261      ;
+; -8.594 ; vending_machine:vm_inst|credit[1]   ; vending_machine:vm_inst|m_count[16] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.261      ;
+; -8.594 ; vending_machine:vm_inst|credit[1]   ; vending_machine:vm_inst|m_count[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.261      ;
+; -8.502 ; vending_machine:vm_inst|m_count[17] ; vending_machine:vm_inst|m_count[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.169      ;
+; -8.502 ; vending_machine:vm_inst|m_count[17] ; vending_machine:vm_inst|m_count[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.169      ;
+; -8.502 ; vending_machine:vm_inst|m_count[17] ; vending_machine:vm_inst|m_count[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.169      ;
+; -8.502 ; vending_machine:vm_inst|m_count[17] ; vending_machine:vm_inst|m_count[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.169      ;
+; -8.502 ; vending_machine:vm_inst|m_count[17] ; vending_machine:vm_inst|m_count[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.169      ;
+; -8.502 ; vending_machine:vm_inst|m_count[17] ; vending_machine:vm_inst|m_count[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.169      ;
+; -8.502 ; vending_machine:vm_inst|m_count[17] ; vending_machine:vm_inst|m_count[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.169      ;
+; -8.502 ; vending_machine:vm_inst|m_count[17] ; vending_machine:vm_inst|m_count[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.169      ;
+; -8.467 ; vending_machine:vm_inst|m_count[17] ; vending_machine:vm_inst|m_count[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.134      ;
+; -8.467 ; vending_machine:vm_inst|m_count[17] ; vending_machine:vm_inst|m_count[9]  ; clk          ; clk         ; 1.000        ; 0.000      ; 9.134      ;
+; -8.467 ; vending_machine:vm_inst|m_count[17] ; vending_machine:vm_inst|m_count[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.134      ;
+; -8.467 ; vending_machine:vm_inst|m_count[17] ; vending_machine:vm_inst|m_count[11] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.134      ;
+; -8.467 ; vending_machine:vm_inst|m_count[17] ; vending_machine:vm_inst|m_count[12] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.134      ;
+; -8.467 ; vending_machine:vm_inst|m_count[17] ; vending_machine:vm_inst|m_count[13] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.134      ;
+; -8.467 ; vending_machine:vm_inst|m_count[17] ; vending_machine:vm_inst|m_count[14] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.134      ;
+; -8.467 ; vending_machine:vm_inst|m_count[17] ; vending_machine:vm_inst|m_count[15] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.134      ;
+; -8.467 ; vending_machine:vm_inst|m_count[17] ; vending_machine:vm_inst|m_count[16] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.134      ;
+; -8.467 ; vending_machine:vm_inst|m_count[17] ; vending_machine:vm_inst|m_count[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 9.134      ;
+; -8.315 ; vending_machine:vm_inst|credit[0]   ; vending_machine:vm_inst|m_count[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 8.982      ;
+; -8.315 ; vending_machine:vm_inst|credit[0]   ; vending_machine:vm_inst|m_count[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 8.982      ;
+; -8.315 ; vending_machine:vm_inst|credit[0]   ; vending_machine:vm_inst|m_count[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 8.982      ;
+; -8.315 ; vending_machine:vm_inst|credit[0]   ; vending_machine:vm_inst|m_count[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 8.982      ;
+; -8.315 ; vending_machine:vm_inst|credit[0]   ; vending_machine:vm_inst|m_count[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 8.982      ;
+; -8.315 ; vending_machine:vm_inst|credit[0]   ; vending_machine:vm_inst|m_count[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 8.982      ;
+; -8.315 ; vending_machine:vm_inst|credit[0]   ; vending_machine:vm_inst|m_count[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 8.982      ;
+; -8.315 ; vending_machine:vm_inst|credit[0]   ; vending_machine:vm_inst|m_count[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 8.982      ;
+; -8.286 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[18] ; clk          ; clk         ; 1.000        ; 0.000      ; 8.953      ;
+; -8.286 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[19] ; clk          ; clk         ; 1.000        ; 0.000      ; 8.953      ;
+; -8.286 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[20] ; clk          ; clk         ; 1.000        ; 0.000      ; 8.953      ;
+; -8.286 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[21] ; clk          ; clk         ; 1.000        ; 0.000      ; 8.953      ;
+; -8.286 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[22] ; clk          ; clk         ; 1.000        ; 0.000      ; 8.953      ;
+; -8.286 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[23] ; clk          ; clk         ; 1.000        ; 0.000      ; 8.953      ;
+; -8.286 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[24] ; clk          ; clk         ; 1.000        ; 0.000      ; 8.953      ;
+; -8.286 ; vending_machine:vm_inst|credit[2]   ; vending_machine:vm_inst|m_count[25] ; clk          ; clk         ; 1.000        ; 0.000      ; 8.953      ;
+; -8.280 ; vending_machine:vm_inst|credit[0]   ; vending_machine:vm_inst|m_count[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 8.947      ;
+; -8.280 ; vending_machine:vm_inst|credit[0]   ; vending_machine:vm_inst|m_count[9]  ; clk          ; clk         ; 1.000        ; 0.000      ; 8.947      ;
+; -8.280 ; vending_machine:vm_inst|credit[0]   ; vending_machine:vm_inst|m_count[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 8.947      ;
+; -8.280 ; vending_machine:vm_inst|credit[0]   ; vending_machine:vm_inst|m_count[11] ; clk          ; clk         ; 1.000        ; 0.000      ; 8.947      ;
+; -8.280 ; vending_machine:vm_inst|credit[0]   ; vending_machine:vm_inst|m_count[12] ; clk          ; clk         ; 1.000        ; 0.000      ; 8.947      ;
+; -8.280 ; vending_machine:vm_inst|credit[0]   ; vending_machine:vm_inst|m_count[13] ; clk          ; clk         ; 1.000        ; 0.000      ; 8.947      ;
+; -8.280 ; vending_machine:vm_inst|credit[0]   ; vending_machine:vm_inst|m_count[14] ; clk          ; clk         ; 1.000        ; 0.000      ; 8.947      ;
+; -8.280 ; vending_machine:vm_inst|credit[0]   ; vending_machine:vm_inst|m_count[15] ; clk          ; clk         ; 1.000        ; 0.000      ; 8.947      ;
+; -8.280 ; vending_machine:vm_inst|credit[0]   ; vending_machine:vm_inst|m_count[16] ; clk          ; clk         ; 1.000        ; 0.000      ; 8.947      ;
+; -8.280 ; vending_machine:vm_inst|credit[0]   ; vending_machine:vm_inst|m_count[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 8.947      ;
+; -8.198 ; vending_machine:vm_inst|m_count[16] ; vending_machine:vm_inst|m_count[18] ; clk          ; clk         ; 1.000        ; 0.000      ; 8.865      ;
+; -8.198 ; vending_machine:vm_inst|m_count[16] ; vending_machine:vm_inst|m_count[19] ; clk          ; clk         ; 1.000        ; 0.000      ; 8.865      ;
++--------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clk'                                                                                                                                                 ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.399 ; btn_reg[0]                            ; vending_machine:vm_inst|prev_coin     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.620      ;
+; 1.705 ; btn_reg[2]                            ; vending_machine:vm_inst|state.DISP    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.926      ;
+; 1.930 ; vending_machine:vm_inst|state.DISP    ; vending_machine:vm_inst|state.PICK    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.151      ;
+; 1.935 ; vending_machine:vm_inst|state.DISP    ; vending_machine:vm_inst|led_motor     ; clk          ; clk         ; 0.000        ; 0.000      ; 2.156      ;
+; 2.094 ; btn_reg[3]                            ; vending_machine:vm_inst|state.IDLE    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.315      ;
+; 2.116 ; vending_machine:vm_inst|m_count[8]    ; vending_machine:vm_inst|m_count[8]    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.337      ;
+; 2.117 ; vending_machine:vm_inst|m_count[15]   ; vending_machine:vm_inst|m_count[15]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.338      ;
+; 2.126 ; vending_machine:vm_inst|m_count[9]    ; vending_machine:vm_inst|m_count[9]    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; vending_machine:vm_inst|m_count[10]   ; vending_machine:vm_inst|m_count[10]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; vending_machine:vm_inst|m_count[17]   ; vending_machine:vm_inst|m_count[17]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; vending_machine:vm_inst|m_count[20]   ; vending_machine:vm_inst|m_count[20]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
+; 2.127 ; vending_machine:vm_inst|m_count[5]    ; vending_machine:vm_inst|m_count[5]    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.348      ;
+; 2.135 ; vending_machine:vm_inst|m_count[7]    ; vending_machine:vm_inst|m_count[7]    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.356      ;
+; 2.135 ; vending_machine:vm_inst|m_count[25]   ; vending_machine:vm_inst|m_count[25]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.356      ;
+; 2.136 ; vending_machine:vm_inst|m_count[19]   ; vending_machine:vm_inst|m_count[19]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.357      ;
+; 2.140 ; vending_machine:vm_inst|m_count[18]   ; vending_machine:vm_inst|m_count[18]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.361      ;
+; 2.160 ; vending_machine:vm_inst|await_collect ; vending_machine:vm_inst|await_collect ; clk          ; clk         ; 0.000        ; 0.000      ; 2.381      ;
+; 2.167 ; vending_machine:vm_inst|credit[3]     ; vending_machine:vm_inst|credit[3]     ; clk          ; clk         ; 0.000        ; 0.000      ; 2.388      ;
+; 2.193 ; vending_machine:vm_inst|credit[0]     ; vending_machine:vm_inst|credit[0]     ; clk          ; clk         ; 0.000        ; 0.000      ; 2.414      ;
+; 2.193 ; vending_machine:vm_inst|state.IDLE    ; vending_machine:vm_inst|state.IDLE    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.414      ;
+; 2.194 ; vending_machine:vm_inst|credit[0]     ; vending_machine:vm_inst|credit[2]     ; clk          ; clk         ; 0.000        ; 0.000      ; 2.415      ;
+; 2.198 ; vending_machine:vm_inst|credit[0]     ; vending_machine:vm_inst|credit[1]     ; clk          ; clk         ; 0.000        ; 0.000      ; 2.419      ;
+; 2.221 ; vending_machine:vm_inst|m_count[11]   ; vending_machine:vm_inst|m_count[11]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.442      ;
+; 2.221 ; vending_machine:vm_inst|m_count[16]   ; vending_machine:vm_inst|m_count[16]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.442      ;
+; 2.221 ; vending_machine:vm_inst|m_count[21]   ; vending_machine:vm_inst|m_count[21]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.442      ;
+; 2.229 ; vending_machine:vm_inst|m_count[3]    ; vending_machine:vm_inst|m_count[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.450      ;
+; 2.230 ; vending_machine:vm_inst|m_count[13]   ; vending_machine:vm_inst|m_count[13]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.451      ;
+; 2.230 ; vending_machine:vm_inst|m_count[23]   ; vending_machine:vm_inst|m_count[23]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.451      ;
+; 2.231 ; vending_machine:vm_inst|m_count[12]   ; vending_machine:vm_inst|m_count[12]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; vending_machine:vm_inst|m_count[14]   ; vending_machine:vm_inst|m_count[14]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; vending_machine:vm_inst|m_count[22]   ; vending_machine:vm_inst|m_count[22]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; vending_machine:vm_inst|m_count[24]   ; vending_machine:vm_inst|m_count[24]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.452      ;
+; 2.232 ; vending_machine:vm_inst|m_count[2]    ; vending_machine:vm_inst|m_count[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.453      ;
+; 2.250 ; vending_machine:vm_inst|m_active      ; vending_machine:vm_inst|m_active      ; clk          ; clk         ; 0.000        ; 0.000      ; 2.471      ;
+; 2.260 ; vending_machine:vm_inst|credit[1]     ; vending_machine:vm_inst|credit[1]     ; clk          ; clk         ; 0.000        ; 0.000      ; 2.481      ;
+; 2.260 ; vending_machine:vm_inst|led_motor     ; vending_machine:vm_inst|led_motor     ; clk          ; clk         ; 0.000        ; 0.000      ; 2.481      ;
+; 2.276 ; vending_machine:vm_inst|state.COINS   ; vending_machine:vm_inst|state.DISP    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.497      ;
+; 2.536 ; vending_machine:vm_inst|m_count[4]    ; vending_machine:vm_inst|m_count[4]    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.757      ;
+; 2.536 ; vending_machine:vm_inst|m_count[6]    ; vending_machine:vm_inst|m_count[6]    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.757      ;
+; 2.670 ; vending_machine:vm_inst|m_count[0]    ; vending_machine:vm_inst|m_count[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.891      ;
+; 2.670 ; vending_machine:vm_inst|m_count[1]    ; vending_machine:vm_inst|m_count[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.891      ;
+; 2.677 ; vending_machine:vm_inst|credit[1]     ; vending_machine:vm_inst|credit[2]     ; clk          ; clk         ; 0.000        ; 0.000      ; 2.898      ;
+; 2.876 ; btn_reg[2]                            ; vending_machine:vm_inst|state.COINS   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.097      ;
+; 2.948 ; vending_machine:vm_inst|m_count[8]    ; vending_machine:vm_inst|m_count[9]    ; clk          ; clk         ; 0.000        ; 0.000      ; 3.169      ;
+; 2.949 ; vending_machine:vm_inst|m_count[15]   ; vending_machine:vm_inst|m_count[16]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.170      ;
+; 2.958 ; vending_machine:vm_inst|m_count[9]    ; vending_machine:vm_inst|m_count[10]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.179      ;
+; 2.958 ; vending_machine:vm_inst|m_count[10]   ; vending_machine:vm_inst|m_count[11]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.179      ;
+; 2.958 ; vending_machine:vm_inst|m_count[20]   ; vending_machine:vm_inst|m_count[21]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.179      ;
+; 2.959 ; vending_machine:vm_inst|m_count[5]    ; vending_machine:vm_inst|m_count[6]    ; clk          ; clk         ; 0.000        ; 0.000      ; 3.180      ;
+; 2.968 ; vending_machine:vm_inst|m_count[19]   ; vending_machine:vm_inst|m_count[20]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.189      ;
+; 2.972 ; vending_machine:vm_inst|m_count[18]   ; vending_machine:vm_inst|m_count[19]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.193      ;
+; 2.992 ; vending_machine:vm_inst|state.COINS   ; vending_machine:vm_inst|change[0]     ; clk          ; clk         ; 0.000        ; 0.000      ; 3.213      ;
+; 2.993 ; vending_machine:vm_inst|state.COINS   ; vending_machine:vm_inst|change[1]     ; clk          ; clk         ; 0.000        ; 0.000      ; 3.214      ;
+; 3.059 ; vending_machine:vm_inst|m_count[8]    ; vending_machine:vm_inst|m_count[10]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.280      ;
+; 3.060 ; vending_machine:vm_inst|m_count[15]   ; vending_machine:vm_inst|m_count[17]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.281      ;
+; 3.069 ; vending_machine:vm_inst|m_count[10]   ; vending_machine:vm_inst|m_count[12]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.290      ;
+; 3.069 ; vending_machine:vm_inst|m_count[20]   ; vending_machine:vm_inst|m_count[22]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.290      ;
+; 3.069 ; vending_machine:vm_inst|m_count[9]    ; vending_machine:vm_inst|m_count[11]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.290      ;
+; 3.070 ; vending_machine:vm_inst|m_count[5]    ; vending_machine:vm_inst|m_count[7]    ; clk          ; clk         ; 0.000        ; 0.000      ; 3.291      ;
+; 3.079 ; vending_machine:vm_inst|m_count[19]   ; vending_machine:vm_inst|m_count[21]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.300      ;
+; 3.083 ; vending_machine:vm_inst|m_count[18]   ; vending_machine:vm_inst|m_count[20]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.304      ;
+; 3.086 ; vending_machine:vm_inst|state.DISP    ; vending_machine:vm_inst|m_count[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 3.307      ;
+; 3.089 ; vending_machine:vm_inst|state.DISP    ; vending_machine:vm_inst|m_count[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 3.310      ;
+; 3.100 ; vending_machine:vm_inst|credit[0]     ; vending_machine:vm_inst|change[0]     ; clk          ; clk         ; 0.000        ; 0.000      ; 3.321      ;
+; 3.120 ; vending_machine:vm_inst|credit[2]     ; vending_machine:vm_inst|credit[2]     ; clk          ; clk         ; 0.000        ; 0.000      ; 3.341      ;
+; 3.155 ; btn_reg[2]                            ; vending_machine:vm_inst|credit[1]     ; clk          ; clk         ; 0.000        ; 0.000      ; 3.376      ;
+; 3.156 ; btn_reg[2]                            ; vending_machine:vm_inst|credit[0]     ; clk          ; clk         ; 0.000        ; 0.000      ; 3.377      ;
+; 3.161 ; vending_machine:vm_inst|m_count[16]   ; vending_machine:vm_inst|m_count[17]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.382      ;
+; 3.161 ; vending_machine:vm_inst|m_count[11]   ; vending_machine:vm_inst|m_count[12]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.382      ;
+; 3.161 ; vending_machine:vm_inst|m_count[21]   ; vending_machine:vm_inst|m_count[22]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.382      ;
+; 3.169 ; vending_machine:vm_inst|m_count[3]    ; vending_machine:vm_inst|m_count[4]    ; clk          ; clk         ; 0.000        ; 0.000      ; 3.390      ;
+; 3.170 ; vending_machine:vm_inst|m_count[13]   ; vending_machine:vm_inst|m_count[14]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.391      ;
+; 3.170 ; vending_machine:vm_inst|m_count[23]   ; vending_machine:vm_inst|m_count[24]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.391      ;
+; 3.170 ; vending_machine:vm_inst|m_count[8]    ; vending_machine:vm_inst|m_count[11]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.391      ;
+; 3.171 ; vending_machine:vm_inst|m_count[14]   ; vending_machine:vm_inst|m_count[15]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.392      ;
+; 3.171 ; vending_machine:vm_inst|m_count[24]   ; vending_machine:vm_inst|m_count[25]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.392      ;
+; 3.180 ; vending_machine:vm_inst|m_count[9]    ; vending_machine:vm_inst|m_count[12]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.401      ;
+; 3.190 ; vending_machine:vm_inst|m_count[19]   ; vending_machine:vm_inst|m_count[22]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.411      ;
+; 3.194 ; vending_machine:vm_inst|m_count[18]   ; vending_machine:vm_inst|m_count[21]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.415      ;
+; 3.209 ; vending_machine:vm_inst|credit[2]     ; vending_machine:vm_inst|change[2]     ; clk          ; clk         ; 0.000        ; 0.000      ; 3.430      ;
+; 3.247 ; vending_machine:vm_inst|await_collect ; vending_machine:vm_inst|state.IDLE    ; clk          ; clk         ; 0.000        ; 0.000      ; 3.468      ;
+; 3.279 ; vending_machine:vm_inst|state.DISP    ; vending_machine:vm_inst|await_collect ; clk          ; clk         ; 0.000        ; 0.000      ; 3.500      ;
+; 3.280 ; vending_machine:vm_inst|m_count[3]    ; vending_machine:vm_inst|m_count[5]    ; clk          ; clk         ; 0.000        ; 0.000      ; 3.501      ;
+; 3.281 ; vending_machine:vm_inst|m_count[13]   ; vending_machine:vm_inst|m_count[15]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.502      ;
+; 3.281 ; vending_machine:vm_inst|m_count[23]   ; vending_machine:vm_inst|m_count[25]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.502      ;
+; 3.281 ; vending_machine:vm_inst|m_count[8]    ; vending_machine:vm_inst|m_count[12]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.502      ;
+; 3.282 ; vending_machine:vm_inst|m_count[14]   ; vending_machine:vm_inst|m_count[16]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.503      ;
+; 3.305 ; vending_machine:vm_inst|m_count[18]   ; vending_machine:vm_inst|m_count[22]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.526      ;
+; 3.368 ; vending_machine:vm_inst|m_count[6]    ; vending_machine:vm_inst|m_count[7]    ; clk          ; clk         ; 0.000        ; 0.000      ; 3.589      ;
+; 3.368 ; vending_machine:vm_inst|m_count[4]    ; vending_machine:vm_inst|m_count[5]    ; clk          ; clk         ; 0.000        ; 0.000      ; 3.589      ;
+; 3.370 ; btn_reg[3]                            ; vending_machine:vm_inst|state.COINS   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.591      ;
+; 3.370 ; vending_machine:vm_inst|state.DISP    ; vending_machine:vm_inst|change[2]     ; clk          ; clk         ; 0.000        ; 0.000      ; 3.591      ;
+; 3.371 ; vending_machine:vm_inst|state.DISP    ; vending_machine:vm_inst|change[3]     ; clk          ; clk         ; 0.000        ; 0.000      ; 3.592      ;
+; 3.391 ; vending_machine:vm_inst|m_count[3]    ; vending_machine:vm_inst|m_count[6]    ; clk          ; clk         ; 0.000        ; 0.000      ; 3.612      ;
+; 3.392 ; vending_machine:vm_inst|m_count[13]   ; vending_machine:vm_inst|m_count[16]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.613      ;
+; 3.393 ; vending_machine:vm_inst|m_count[14]   ; vending_machine:vm_inst|m_count[17]   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.614      ;
+; 3.431 ; vending_machine:vm_inst|prev_coin     ; vending_machine:vm_inst|credit[3]     ; clk          ; clk         ; 0.000        ; 0.000      ; 3.652      ;
+; 3.453 ; vending_machine:vm_inst|state.PICK    ; vending_machine:vm_inst|state.PICK    ; clk          ; clk         ; 0.000        ; 0.000      ; 3.674      ;
+; 3.461 ; vending_machine:vm_inst|state.COINS   ; vending_machine:vm_inst|change[2]     ; clk          ; clk         ; 0.000        ; 0.000      ; 3.682      ;
+; 3.463 ; vending_machine:vm_inst|state.COINS   ; vending_machine:vm_inst|change[3]     ; clk          ; clk         ; 0.000        ; 0.000      ; 3.684      ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 1883     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 1883     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 8     ; 8    ;
+; Unconstrained Input Port Paths  ; 134   ; 134  ;
+; Unconstrained Output Ports      ; 22    ; 22   ;
+; Unconstrained Output Port Paths ; 66    ; 66   ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clk    ; clk   ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; btn[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; btn[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; btn[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; btn[3]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; collected  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                            ;
++---------------+---------------------------------------------------------------------------------------+
+; Output Port   ; Comment                                                                               ;
++---------------+---------------------------------------------------------------------------------------+
+; hex_change[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_change[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_change[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_change[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_change[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_change[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_change[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_credit[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_credit[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_credit[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_credit[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_credit[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_credit[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_credit[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[4]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[5]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[6]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[7]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; btn[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; btn[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; btn[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; btn[3]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; collected  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                            ;
++---------------+---------------------------------------------------------------------------------------+
+; Output Port   ; Comment                                                                               ;
++---------------+---------------------------------------------------------------------------------------+
+; hex_change[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_change[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_change[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_change[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_change[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_change[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_change[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_credit[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_credit[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_credit[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_credit[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_credit[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_credit[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hex_credit[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[4]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[5]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[6]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[7]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Sun Aug 17 19:23:54 2025
+Info: Command: quartus_sta LAB3__VENDING_MACHINE -c LAB3__VENDING_MACHINE
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'LAB3__VENDING_MACHINE.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -8.795
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -8.795            -324.835 clk 
+Info (332146): Worst-case hold slack is 1.399
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.399               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4674 megabytes
+    Info: Processing ended: Sun Aug 17 19:23:54 2025
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

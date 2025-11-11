@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../vending_machine.srcs/sources_1/new/bcd_to_7seg.v" \
+"../../../../vending_machine.srcs/sources_1/new/fsm.v" \
+"../../../../vending_machine.srcs/sources_1/new/top_vending_machine.v" \
+
+sv xil_defaultlib  \
+"../../../../vending_machine.srcs/sim_1/new/tb_vending_machine.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
